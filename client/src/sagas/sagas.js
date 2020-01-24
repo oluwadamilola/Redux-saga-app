@@ -13,8 +13,6 @@ export function* incrementAsync() {
     yield put({ type: 'INCREMENT' })
 }
 
-
-
 export default function* rootSaga() {
     yield all([
         call(helloSaga),
