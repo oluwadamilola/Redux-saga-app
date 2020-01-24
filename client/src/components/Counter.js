@@ -1,19 +1,30 @@
 import React  from 'react'
+import styled from 'styled-components'
+
+const Button = styled.button`
+  color: black;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid aqua;
+  border-radius: 3px;
+`;
+
 
 const Counter = ({ value, onIncrement, onDecrement, onIncrementAsync }) =>
       <div>
-        <button onClick={onIncrement}>
+        <Button onClick={onIncrement}>
           Increment
-        </button>
+        </Button>
         {' '}
-        <button onClick={onDecrement}>
+        <Button onClick={onDecrement}>
           Decrement
-        </button>
+        </Button>
         {' '}
-        <button onClick={onIncrementAsync}>
+        <Button onClick={onIncrementAsync}>
           Increment after 1 second
-        </button>
-        <hr />
+        </Button>
+      
         <div>
           Clicked: {value} times
         </div>
